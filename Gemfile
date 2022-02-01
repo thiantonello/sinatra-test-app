@@ -4,10 +4,11 @@ source 'https://rubygems.org'
 
 ruby '3.1.0'
 
-gem 'foreman'
-gem 'guard'
-gem 'guard-rspec'
-gem 'rack'
-gem 'rack-test'
-gem 'rspec'
-gem 'sinatra'
+gem 'rack', '~> 2.2.3'
+gem 'sinatra', '~> 2.1.0'
+
+group :development, :test do
+  gem 'rack-test', '~> 1.1.0'
+  gem 'rspec', '~> 3.1.0'
+  gem 'rubocop', require: false
+end
